@@ -1,10 +1,16 @@
-import AWS from 'aws-sdk';
+import AWS from "aws-sdk";
+import dotenv from "dotenv";
+
+dotenv.config();
+
 
 AWS.config.update({
-    accessKeyId: process.env.ACCESSKEYID,
-    secretAccessKey: process.env.SECRETACCESSKEYID,
-    region:process.env.REGION
+  accessKeyId: process.env.ACCESSKEYID,
+  secretAccessKey: process.env.SECRETACCESSKEYID,
+  region: "ap-southeast-2",
 });
+
+
 
 const textract = new AWS.Textract();
 
